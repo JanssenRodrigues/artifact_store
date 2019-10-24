@@ -9,7 +9,7 @@ module.exports = {
       user: DB_USERNAME,
       password: DB_PASSWORD,
       database: DB_NAME,
-      host: "127.0.0.1",
+      host: "mysql",
       port: DB_PORT
     },
     migrations: { tableName: "knex_migrations" },
