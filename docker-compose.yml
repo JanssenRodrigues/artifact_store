@@ -1,0 +1,50 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports: 
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: local
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: "root"
+    expose:
+      - "3306"
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: api
+    command: sh -c "npm -g install && npm run migrate && npm run dev"
+    ports:
+      - "4000:4000"
+    expose:
+      - "4000"
+    volumes:
+      - ./api/src:/app/api/src
+    links:
+    - mysql:mysql
+    depends_on:
+      - "mysql"
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: front
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/src:/app/client/src
+      - ./client/public:/app/client/public
+    links:
+      - api
+    command: sh -c "npm install && npm run start"
