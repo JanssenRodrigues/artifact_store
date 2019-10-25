@@ -7,7 +7,7 @@
     "dev": "nodemon --experimental-modules --es-module-specifier-resolution=node src/apollo.mjs --watch",
     "start": "node --experimental-modules --es-module-specifier-resolution=node src/apollo.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "knex migrate:latest && knex seed:run"
+    "migrate": "knex migrate:latest"
   },
   "repository": {
     "type": "git",

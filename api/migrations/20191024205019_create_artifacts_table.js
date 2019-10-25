@@ -5,6 +5,9 @@ exports.up = async knex => {
       .unsigned()
       .primary();
     table.string("name", 255).notNullable();
+    table.string("description", 255).notNullable();
+    table.string("datetime", 255).notNullable();
+    table.text("comments");
     table.dateTime("deleted_at");
   });
 };

@@ -7,7 +7,6 @@ ADD . /dist/api
 
 RUN npm install
 
-# Run it in port 3000
 EXPOSE 3000
 
 COPY . /dist/api

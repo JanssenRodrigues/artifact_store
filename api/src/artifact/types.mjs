@@ -15,6 +15,9 @@ const Artifact = gql`
   type Artifact {
     id: Int!
     name: String!
+    description: String
+    datetime: String
+    comments: String
   }
 
   extend type Mutation {
@@ -25,11 +28,17 @@ const Artifact = gql`
 
   input ArtifactInput {
     name: String
+    description: String
+    datetime: String
+    comments: String
   }
 
   input UpdateArtifactInput {
     id: Int!
-    name: String!
+    name: String
+    description: String
+    datetime: String
+    comments: String
   }
 `;
 

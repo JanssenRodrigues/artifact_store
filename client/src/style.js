@@ -8,16 +8,20 @@ export const BaseStyle = createGlobalStyle`
   ${normalize}
   ${reset}
 
-* {
-  box-sizing: border-box;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-}
+  * {
+    box-sizing: border-box;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
 
-body {
-  font-family: "Roboto";
-  background-color: #F5F7FA;
-}
+  body {
+    font-family: "Roboto";
+    background-color: #F5F7FA;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
 `;
 
 export const PageContent = styled.article`

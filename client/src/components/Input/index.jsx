@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import {
@@ -16,10 +16,10 @@ const Input = ({
   select,
   isRequired,
   error,
-  setError
+  setError,
+  inputValue,
+  setInputValue
 }) => {
-  const [inputValue, setInputValue] = useState("");
-
   return (
     <InputContainer select={select}>
       {type ? (
