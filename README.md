@@ -23,6 +23,17 @@ No Front-End você terá acesso a duas páginas, uma de cadastro de artefatos e 
 
 Na API, você terá acesso ao Playground, onde poderá testar todas as queries e mutations criadas.
 
+## IMPORTANTE
+
+A instancia do MYSQL irá tentar utilizar a porta padrão(3306), verifique se esta porta está disponível.
+Caso contrário o MYSQL não irá conectar e a API não conseguirá fazer a sua conexão
+
+Caso haja problemas com algum problema com conflito, sugiro(mas apenas em último caso) utilizar o seguinte comando:
+
+`sudo docker system prune -a`
+
+MAS CUIDADO, ESTE COMANDO IRÁ EXCLUIR OS CONTAINERS, IMAGES E VOLUMES DA SUA MÁQUINA.
+
 
 ## Exemplos de Query e Mutation
 
