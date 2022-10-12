@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/JanssenRodrigues/artifact_store#readme",
   "dependencies": {
-    "apollo-server": "^2.9.4",
+    "apollo-server": "^2.25.4",
     "dataloader": "^1.4.0",
     "graphql-type-json": "^0.3.0",
     "knex": "^0.19.5",
